@@ -3,12 +3,12 @@
 ;; -------------------------------
 
 (require 'js-comint)
+(defun whitespace-clean-and-compile ()
+  (interactive)
+  (whitespace-cleanup-all)
+  (compile compile-command))
+
 (add-hook 'js-mode-hook '(lambda ()
-                           (local-set-key "\C-c\M-r" 'js-beautify-region)
-                           (set (make-local-variable 'compile-command)
-                                (let ((file buffer-file-name))
-                                  (concat jslint-cli file)))
-                           (set (make-local-variable 'compilation-read-command) nil)
                            (local-set-key "\C-c\C-u" 'whitespace-clean-and-compile)
 
                            (local-set-key "\C-x\C-e" 'eval-last-sexp)
