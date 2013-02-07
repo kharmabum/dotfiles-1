@@ -23,7 +23,7 @@
 ;; ------------
 ;; -- Macros --
 ;; ------------
-(require "config-defuns.el")
+(require "defuns-config.el")
 (global-set-key "\C-x\C-m" 'execute-extended-command)
 (global-set-key "\C-c;" 'comment-or-uncomment-region)
 (global-set-key "\M-n" 'next5)
@@ -35,8 +35,7 @@
 (global-set-key "\M-d" 'delete-word)
 (global-set-key "\M-h" 'backward-delete-word)
 
-
 ;; ------------------------
 ;; -- Mode configuration --
 ;; ------------------------
-(require "config-js.el")
+(require "js-config.el")
