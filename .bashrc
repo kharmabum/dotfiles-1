@@ -192,6 +192,7 @@ unset LANG
 export LC_ALL=POSIX
 
 # 2.6) node.js nvm
+# http://nodejs.org/api/repl.html#repl_repl
 alias node="env NODE_NO_READLINE=1 rlwrap node"
 export NODE_DISABLE_COLORS=1
 if [ -s ~/nvm/nvm.sh ]; then
