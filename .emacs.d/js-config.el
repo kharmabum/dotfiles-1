@@ -37,25 +37,21 @@
       ;; Replaced ^ with \^ to indicate that doesn't have to be
       ;; at start of line
       (replace-regexp-in-string
-       "\\\[0K\\[4C" ""
+       "\\\[0K" ""
+       (replace-regexp-in-string
+        "\\\[1G" ""
+       (replace-regexp-in-string
+        "\\\[0J" ""
+       (replace-regexp-in-string
+        "\\\[3G" ""
        (replace-regexp-in-string
         "\\\[0G" ""
        (replace-regexp-in-string
-        "\\\[0K\\\[2C" ""
-       (replace-regexp-in-string
-        "\\\[0K\\\[2C" ""
-       (replace-regexp-in-string
         "\\[2C" ""
        (replace-regexp-in-string
-        "\\[0G" ""
-       (replace-regexp-in-string
         "\\[0K" ""
-       (replace-regexp-in-string
-        "\\[4C" ""
         (replace-regexp-in-string
-         "" ""
-        (replace-regexp-in-string
-        "\\\[0G> \\[0K\\[0G\\[2C" "> " output))))))))))
+         "" "" output))))))))
       )
     output
   )
