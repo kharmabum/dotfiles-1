@@ -195,10 +195,10 @@ export LC_ALL=POSIX
 # http://nodejs.org/api/repl.html#repl_repl
 alias node="env NODE_NO_READLINE=1 rlwrap node"
 export NODE_DISABLE_COLORS=1
-if [ -s ~/nvm/nvm.sh ]; then
-    NVM_DIR=~/nvm
-    source ~/nvm/nvm.sh
-    nvm use 0.8
+if [ -s ~/.nvm/nvm.sh ]; then
+    NVM_DIR=~/.nvm
+    source ~/.nvm/nvm.sh
+    nvm use 0.8.19
 fi
 
 ## ------------------------------
