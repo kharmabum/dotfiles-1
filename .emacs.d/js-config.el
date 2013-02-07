@@ -9,14 +9,11 @@
   (compile compile-command))
 
 (add-hook 'js-mode-hook '(lambda ()
-                           (local-set-key "\C-c\C-u" 'whitespace-clean-and-compile)
-
                            (local-set-key "\C-x\C-e" 'eval-last-sexp)
                            (local-set-key "\C-cb" 'js-send-buffer)
                            (local-set-key "\C-c\C-b" 'js-send-buffer-and-go)
                            (local-set-key "\C-cl" 'js-load-file-and-go)
                            (local-set-key "\C-c!" 'run-js)
-                           (local-set-key "\C-c#" 'run-mongo) ;; Can only be running one
                            (local-set-key "\C-c\C-r" 'js-send-region)
                            (local-set-key "\C-c\C-j" 'js-send-line)
                            ))
@@ -33,15 +30,9 @@
 "
 (if (equal (buffer-name) "*js*")
     (progn
-
-      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      ;; Uncomment these for debugging
-      ;; save the output in a string for messing around with in *ielm*
-      ;; and dumps weird escape stuff to *Messages*
-      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      ;;(setq js-node-output output)
-      ;;(message (concat "\n----------\n" output "\n----------\n"))
-      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      ;; Uncomment these to debug the IO of the node process
+      ;; (setq js-node-output output)
+      ;; (message (concat "\n----------\n" output "\n----------\n"))
 
       ;; Replaced ^ with \^ to indicate that doesn't have to be
       ;; at start of line
