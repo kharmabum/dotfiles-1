@@ -19,7 +19,7 @@
 markkeys "h=^B:l=^F:$=^E"             # emacs style keybindings during copy mode movement in screen
 autodetach             on             # default: on
 crlf                  off             # default: off
-deflogin              off            # default: on
+#deflogin              off            # default: on
 hardcopy_append       on              # default: off
 startup_message       off             # default: on
 vbell                 off             # default: ???

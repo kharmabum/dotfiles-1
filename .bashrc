@@ -198,7 +198,7 @@ export NODE_DISABLE_COLORS=1
 if [ -s ~/.nvm/nvm.sh ]; then
     NVM_DIR=~/.nvm
     source ~/.nvm/nvm.sh
-    nvm use 0.8.19
+    nvm use 0.9
 fi
 
 ## ------------------------------
@@ -207,3 +207,9 @@ fi
 
 ## Define any user-specific variables you want here.
 source ~/.bashrc_custom
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+## 4) Homebrew coreutils
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
